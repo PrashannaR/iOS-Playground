@@ -10,7 +10,7 @@ import Foundation
 class NetworkService: NetworkServiceProtocol {
  
     func request<T>(urlPath: URLPath, method: HTTPMethod, body: Data?) async throws -> T where T: Decodable {
-        guard let url = URL(string: "") else {
+        guard let url = URL(string: "\(Constants.shared.baseURL)\(urlPath)") else {
             throw URLError(.badURL)
         }
 

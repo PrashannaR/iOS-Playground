@@ -11,7 +11,7 @@ import SwiftUI
 struct iOS_PlaygroundApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PostsList(viewModel: PostsDIContainer.shared.makePostsViewModel())
         }
     }
 }
