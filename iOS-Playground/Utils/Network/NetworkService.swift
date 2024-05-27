@@ -8,7 +8,7 @@
 import Foundation
 
 class NetworkService: NetworkServiceProtocol {
-    
+ 
     func request<T>(urlPath: URLPath, method: HTTPMethod, body: Data?) async throws -> T where T: Decodable {
         guard let url = URL(string: "") else {
             throw URLError(.badURL)
@@ -42,5 +42,11 @@ class NetworkService: NetworkServiceProtocol {
             print("Error occurred while decoding \(error.localizedDescription)")
             throw error
         }
+    }
+    
+    
+    //MARK: json encoder
+    func encodeRequestBody<T>(for requestBody: T) -> Data? where T : Encodable {
+        try? JSONEncoder().encode(requestBody)
     }
 }
