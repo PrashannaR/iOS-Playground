@@ -22,6 +22,7 @@
 		5DBA0E092C04E5A800A3C105 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA0E082C04E5A800A3C105 /* PostsViewModel.swift */; };
 		5DBA0E0B2C04E79B00A3C105 /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA0E0A2C04E79B00A3C105 /* PostsList.swift */; };
 		5DBA0E0E2C04E9D900A3C105 /* PostsDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA0E0D2C04E9D900A3C105 /* PostsDIContainer.swift */; };
+		5DBA0E122C04EE8400A3C105 /* MakePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA0E112C04EE8400A3C105 /* MakePost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5DBA0E082C04E5A800A3C105 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		5DBA0E0A2C04E79B00A3C105 /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
 		5DBA0E0D2C04E9D900A3C105 /* PostsDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDIContainer.swift; sourceTree = "<group>"; };
+		5DBA0E112C04EE8400A3C105 /* MakePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5DBA0E0A2C04E79B00A3C105 /* PostsList.swift */,
+				5DBA0E112C04EE8400A3C105 /* MakePost.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				5DBA0DF22C04C10D00A3C105 /* NetworkService.swift in Sources */,
 				5DBA0DEC2C04C05900A3C105 /* NetworkServiceProtocol.swift in Sources */,
 				5DBA0E072C04E3D500A3C105 /* PostsRepoImpl.swift in Sources */,
+				5DBA0E122C04EE8400A3C105 /* MakePost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,15 +17,19 @@ struct PostsList: View {
     var body: some View {
         NavigationView {
             List(viewModel.posts) { post in
-
                 postRow(post: post)
             }
             .navigationTitle("Posts")
+            .onAppear {
+                viewModel.getPosts()
+            }
+
+            .navigationBarItems(trailing:
+                NavigationLink(destination: MakePost(viewModel: viewModel)) {
+                    Text("+")
+                }
+            )
         }
-        .onAppear(perform: {
-            viewModel.getPosts()
-        })
-  
     }
 }
 
@@ -50,13 +54,12 @@ extension PostsList {
                     .foregroundColor(.black)
                     .font(.title3)
                     .fontWeight(.bold)
-                
+
                 Text("\(post.body)")
                     .lineLimit(1)
                     .foregroundColor(.black)
                     .font(.headline)
                     .fontWeight(.light)
-                
 
             })
 

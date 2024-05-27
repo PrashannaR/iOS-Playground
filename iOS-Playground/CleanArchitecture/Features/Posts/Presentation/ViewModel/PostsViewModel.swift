@@ -14,7 +14,7 @@ class PostsViewModel: ObservableObject {
     // send post
     @Published var title: String = ""
     @Published var body: String = ""
-    @Published var userId: Int = 69
+    @Published var userId: Int = 1
     @Published var successMessage: String? = nil
     @Published var failedMessage: String? = nil
 
@@ -52,10 +52,13 @@ class PostsViewModel: ObservableObject {
 
                 DispatchQueue.main.async { [weak self] in
                     self?.successMessage = "Post created successfully"
+                    print("success \(post)")
+                    
                 }
             } catch {
                 DispatchQueue.main.async { [weak self] in
                     self?.failedMessage = "Post creation failed"
+                    
                 }
             }
         }
