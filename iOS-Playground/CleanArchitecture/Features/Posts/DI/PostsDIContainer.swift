@@ -13,12 +13,8 @@ class PostsDIContainer{
     
     private init(){}
     
-    lazy var networkService: NetworkServiceProtocol = {
-       NetworkService()
-    }()
-    
     lazy var postsRepo: PostsRepo = {
-       PostsRepoImpl(networkService: networkService)
+       PostsRepoImpl(networkService: NetworkService())
     }()
     
     

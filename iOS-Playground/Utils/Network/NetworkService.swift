@@ -8,6 +8,8 @@
 import Foundation
 
 class NetworkService: NetworkServiceProtocol {
+    
+    static let shared = NetworkService()
  
     func request<T>(urlPath: URLPath, method: HTTPMethod, body: Data?) async throws -> T where T: Decodable {
         guard let url = URL(string: "\(Constants.shared.baseURL)\(urlPath)") else {
